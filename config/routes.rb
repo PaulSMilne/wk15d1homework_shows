@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-    scope path: "api" do
-      resources :shows
-    end
+  devise_for :users
+  get 'favorites' => 'favorite_shows#index'
+
 
   # get ({'api/shows' => 'shows#index'})
 
